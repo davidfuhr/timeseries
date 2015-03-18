@@ -13,13 +13,6 @@ class MaxAggregation implements AggregationInterface
      */
     public function aggregate(Traversable $timeseries)
     {
-        $max = null;
-        foreach ($timeseries as $value) {
-            if (null === $max || $max < $value) {
-                $max = $value;
-            }
-        }
-
-        return $max;
+        return max(iterator_to_array($timeseries));
     }
 }

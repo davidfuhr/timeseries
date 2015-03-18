@@ -15,7 +15,7 @@ class MinAggregation implements AggregationInterface
     {
         $min = null;
         foreach ($timeseries as $value) {
-            if (null === $min || $min > $value) {
+            if (null !== $value && (null === $min || $min > $value)) {
                 $min = $value;
             }
         }

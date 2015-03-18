@@ -12,6 +12,8 @@ class MinAggregationTest extends \PHPUnit_Framework_TestCase
         return [
             [[1, 1, 2, 3, 5, 8, 13, 21], 1],
             [[0.1, 0.00001], 0.00001],
+            [[-31, 51, null], -31],
+            [[53, 2, 0.00001, null], 0.00001],
         ];
     }
 
