@@ -16,4 +16,9 @@ interface TimeseriesInterface extends Countable, Traversable
      * @return \DateInterval
      */
     public function getInterval();
+
+    /**
+     * @return string
+     */
+    public function getName();
 }

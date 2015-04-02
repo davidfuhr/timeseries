@@ -1,7 +1,6 @@
 {
   "name": "flagbit/timeseries",
-  "description": "description_text",
-  "minimum-stability": "alpha",
+  "description": "",
   "license": "BSD-3-Clause",
   "authors": [
     {
@@ -22,6 +21,11 @@
   "autoload": {
     "psr-4": {
       "Flagbit\\": "."
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Flagbit\\Timeseries\\Tests\\": "Tests"
     }
   }
 }

@@ -25,11 +25,17 @@ class Timeseries implements IteratorAggregate, TimeseriesInterface
      */
     private $values;
 
-    public function __construct(DateTimeInterface $start, DateInterval $interval, array $values = [])
+    /**
+     * @var string
+     */
+    private $name;
+
+    public function __construct(DateTimeInterface $start, DateInterval $interval, array $values = [], $name = '')
     {
         $this->start = $start;
         $this->interval = $interval;
         $this->values = $values;
+        $this->name = $name;
     }
 
     public function __clone()
@@ -51,6 +57,14 @@ class Timeseries implements IteratorAggregate, TimeseriesInterface
     public function getInterval()
     {
         return $this->interval;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 
     /**

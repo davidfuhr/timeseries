@@ -9,7 +9,8 @@ php:
 before_script:
   - composer self-update
   - composer install
+  - mysql -e 'CREATE DATABASE timeseries_test COLLATE utf8_unicode_ci;'
+  - mysql timeseries_test < schema.mysql.sql
 
 script:
   - vendor/bin/phpunit --coverage-text
-
